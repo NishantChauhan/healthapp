@@ -52,6 +52,9 @@ docker run -tid -p 8080:8080  -v /c/Users:/mnt nishantchouhan/healthapp:latest
 
 docker run -tid -p 8080  -v /c/Users:/mnt nishantchouhan/healthapp:latest
 
+#Jenkins and Gitlab configuration
+
+
 
 #Misc
 cd /c/My/Programming/workspace/HealthApplication-MVC-JSP
