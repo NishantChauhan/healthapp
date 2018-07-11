@@ -54,6 +54,23 @@ docker run -tid -p 8080  -v /c/Users:/mnt nishantchouhan/healthapp:latest
 
 #Jenkins and Gitlab configuration
 
+# Build angular
+#-- Clean Distribution folder
+npm run clean && tsc -p src/ #not working
+npm run build && browserify -s main dist/main.js > dist/bundle.js && npm run minifymain.js > dist/bundle.js && npm run minify # not working
+uglifyjs dist/bundle.js --screw-ie8 --compress --mangle --output dist/bundle.min.js
+
+#Gitlab admin user is root / gitlabadmin - LFkKdzF1ZUrgipsmozWc
+
+
+ # Build the Docker Image
+        sudo docker build -t nishantchouhan/healthapp:latest /var/jenkins_home/workspace/healthapp
+
+        # Log into Image repository (Dockerhub) using login credentials
+        sudo docker login -u="dockerhubLogin" -p="dockerhubPassword"
+
+        # Push/upload image into image repository (Dockerhub)
+        sudo docker push nishantchouhan/healthapp:latest
 
 
 #Misc
@@ -65,6 +82,7 @@ docker rm sbapp
 docker run -tid -p 8080:8080 --name sbapp springboot-app:latest
 
 docker exec -ti sbapp sh
+
 
 
 
