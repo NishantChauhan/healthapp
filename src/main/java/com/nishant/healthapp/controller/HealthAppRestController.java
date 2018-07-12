@@ -31,7 +31,7 @@ public class HealthAppRestController {
 	@Autowired
 	UserDAO user;
 	
-	@RequestMapping(value = "/user", method = RequestMethod.POST, produces = "application/json")
+//	@RequestMapping(value = "/user", method = RequestMethod.POST, produces = "application/json")
 	@ResponseBody
 	UserInfo health(@RequestBody UserInfo user) {
 		user.setFirstname("Mr. " + user.getFirstname());
@@ -42,7 +42,7 @@ public class HealthAppRestController {
 	}
 
 	
-	@RequestMapping(value = "/login", method = RequestMethod.GET, produces = "application/json")
+//	@RequestMapping(value = "/login", method = RequestMethod.GET, produces = "application/json")
 	String login() {
 		logger.debug("Inside Login Method of rest Controller");
 		return "login";
@@ -62,7 +62,7 @@ public class HealthAppRestController {
 	}
 	
 
-	@RequestMapping(value = "/doctors", method = RequestMethod.GET, produces = "application/json")
+//	@RequestMapping(value = "/doctors", method = RequestMethod.GET, produces = "application/json")
 	DoctorList searchDoctorsBySpeciality(@RequestParam(value = "speciality", required = false) String speciality) {
 		List<DoctorObj> doctorList = new ArrayList<>();
 		doctorList.add(new DoctorObj("1", "Nishant", "Chauhan", "Java"));

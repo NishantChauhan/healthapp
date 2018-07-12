@@ -39,7 +39,7 @@ public class HealthApplicationJspController{
 		return "index.html";
 	}
 	
-	@RequestMapping("/model")
+//	@RequestMapping("/model")
 	ModelAndView model(ModelMap model, @RequestParam("mode") String mode) {
 
 		switch (mode) {
