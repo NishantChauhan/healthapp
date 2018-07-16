@@ -32,6 +32,7 @@ public class HealthAppRestController {
 	UserDAO user;
 	
 //	@RequestMapping(value = "/user", method = RequestMethod.POST, produces = "application/json")
+	
 	@ResponseBody
 	UserInfo health(@RequestBody UserInfo user) {
 		user.setFirstname("Mr. " + user.getFirstname());
