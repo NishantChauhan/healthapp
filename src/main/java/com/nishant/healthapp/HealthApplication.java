@@ -8,6 +8,9 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.stereotype.Controller;
 
+/**
+ * @author Nishant Chauhan
+ * */
 @SpringBootApplication(exclude = HibernateJpaAutoConfiguration.class)
 @Controller
 public class HealthApplication extends SpringBootServletInitializer {
